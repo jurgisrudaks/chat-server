@@ -20,7 +20,7 @@ const disconnectHandler = (
   io: SocketIO.Server,
   socket: SocketIO.Socket,
   user: User
-) => () => {
+) => (): void => {
   logger.info(`[${socket.id}][${user.username}] disconnected`);
 
   if (user.inactivityTimeout) {

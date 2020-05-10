@@ -12,7 +12,7 @@ enum DisconnectionReason {
 export const resetUserActivityTimer = (
   io: SocketIO.Server,
   socket: SocketIO.Socket
-) => {
+): void => {
   logger.debug(
     `[${socket.id}][${socket.handshake.query.username}] attempting to reset inactivity timer`
   );

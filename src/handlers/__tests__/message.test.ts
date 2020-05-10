@@ -4,7 +4,7 @@ import { resetUserActivityTimer } from '../../utils/activity';
 import messageHandler from '../message';
 
 jest.mock('uuid', () => ({
-  v4: () => 'unique-test-event-id',
+  v4: (): string => 'unique-test-event-id',
 }));
 jest.mock('../../store/users');
 jest.mock('../../utils/activity');

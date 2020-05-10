@@ -19,7 +19,7 @@ export const deleteUser = (username: string): void => {
   delete users[username];
 };
 
-export const clearUsers = () => {
+export const clearUsers = (): void => {
   users = {};
 };
 

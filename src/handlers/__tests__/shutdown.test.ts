@@ -3,7 +3,7 @@ import { clearUsers } from '../../store/users';
 import shutdownHandler from '../shutdown';
 
 jest.mock('uuid', () => ({
-  v4: () => 'unique-test-event-id',
+  v4: (): string => 'unique-test-event-id',
 }));
 jest.mock('../../store/users');
 

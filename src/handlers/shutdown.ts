@@ -9,7 +9,7 @@ export const shutdownHandler = (
   io: SocketIO.Server,
   server: http.Server,
   signal?: string
-) => () => {
+) => (): void => {
   logger.info(`${signal ? `Received ${signal} ` : ''}Shutting down...`);
 
   clearUsers();

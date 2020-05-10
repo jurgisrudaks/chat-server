@@ -4,7 +4,7 @@ import { Request, Response } from 'express';
 import { getUser, createUser, deleteUser } from '../store/users';
 import logger from '../utils/logger';
 
-const loginRoute = (req: Request, res: Response) => {
+const loginRoute = (req: Request, res: Response): void => {
   // Give each login request unique id so it can be tracked
   const requestId = uuidv4();
   logger.info(`[${requestId}][${req.body.username}] incoming login request`);

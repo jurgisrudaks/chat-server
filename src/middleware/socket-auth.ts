@@ -1,6 +1,7 @@
 import { getUser } from '../store/users';
 import logger from '../utils/logger';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const socketAuth: (socket: SocketIO.Socket, fn: (err?: any) => void) => void = (
   socket,
   next

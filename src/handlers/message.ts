@@ -13,7 +13,7 @@ const messageHandler = (
   io: SocketIO.Server,
   socket: SocketIO.Socket,
   user: User
-) => ({ message }: Message) => {
+) => ({ message }: Message): void => {
   logger.info(`[${socket.id}][${user.username}]: ${message}`);
 
   io.emit('message', {

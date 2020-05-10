@@ -12,6 +12,14 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
+  "overrides": [
+    {
+      "files": "**/__tests__/*",
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ],
   "parserOptions": {
     "project": "./tsconfig.lint.json",
     "ecmaVersion": 2018,
