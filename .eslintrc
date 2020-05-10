@@ -1,4 +1,7 @@
 {
+  "env": {
+    "node": true
+  },
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
@@ -6,11 +9,11 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:prettier/@typescript-eslint",
+    "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": "./tsconfig.lint.json",
     "ecmaVersion": 2018,
     "sourceType": "module"
   }

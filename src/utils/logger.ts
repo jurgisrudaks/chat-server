@@ -1,7 +1,8 @@
 import { createLogger, format, transports } from 'winston';
-const { combine, timestamp, colorize, align, printf, json } = format;
+const { combine, timestamp, colorize, align, printf } = format;
 
 const dateString = new Date().toJSON().split('T')[0];
+const logsPath = process.env.LOGS_PATH || 'logs';
 
 const logger = createLogger({
   level: process.env.LOG_LEVEL,
@@ -23,11 +24,11 @@ const logger = createLogger({
       ),
     }),
     new transports.File({
-      filename: `${process.env.LOGS_PATH}/error/${dateString}.log`,
+      filename: `${logsPath}/error/${dateString}.log`,
       level: 'error',
     }),
     new transports.File({
-      filename: `${process.env.LOGS_PATH}/combined/${dateString}.log`,
+      filename: `${logsPath}/combined/${dateString}.log`,
     }),
   ],
 });

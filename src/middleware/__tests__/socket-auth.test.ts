@@ -5,15 +5,27 @@ jest.mock('../../store/users');
 
 describe('Socket auth middleware', () => {
   const nextMock = jest.fn();
-  let socketMock = {
-    id: 'test-socket-id',
+  let socketMock: {
+    id: string;
     handshake: {
       query: {
-        username: 'tester-1',
-        token: 'test-token'
+        username: string;
+        token: string;
+      };
+    };
+  };
+
+  beforeEach(() => {
+    socketMock = {
+      id: 'test-socket-id',
+      handshake: {
+        query: {
+          username: 'tester-1',
+          token: 'test-token',
+        },
       },
-    },
-  };;
+    };
+  });
 
   it('handle user not found', () => {
     (getUser as jest.Mock).mockImplementationOnce(() => undefined);
