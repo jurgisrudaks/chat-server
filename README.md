@@ -49,21 +49,21 @@ The full folder structure of this app is explained below:
 
 > **Note!** Make sure you have already built the app using `npm run build`
 
-| Name                  | Description                                                                                                |
-| --------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **.vscode**           | Contains VS Code specific settings                                                                         |
-| **.github**           | Contains GitHub settings and configurations, incuding the GitHub Actions workflows                         |
-| **dist**              | Contains the distributable (or output) from TypeScript build. This is the code to be shipped               |
-| **node_modules**      | Contains all npm dependencies                                                                              |
-| **src**               | Contains source code that will be compiled to the dist dir                                                 |
-| **src**/server.ts     | Entry point to app                                                                                         |
-| **\*\***tests**\*\*** | Separate folder next to the source being tested, contains tests.                                           |
-| .env.example          | Example .env file, create .env file based on this example.                                                 |
-| jest.config.js        | Used to configure Jest running tests written in TypeScript                                                 |
-| package.json          | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped) |
-| tsconfig.json         | Config settings for compiling server code written in TypeScript                                            |
-| .eslintrc             | Config settings for ESLint code style checking                                                             |
-| .eslintignore         | Config settings for paths to exclude from linting                                                          |
+| Name                        | Description                                                                                                |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **.vscode**                 | Contains VS Code specific settings                                                                         |
+| **.github**                 | Contains GitHub settings and configurations, incuding the GitHub Actions workflows                         |
+| **dist**                    | Contains the distributable (or output) from TypeScript build. This is the code to be shipped               |
+| **node_modules**            | Contains all npm dependencies                                                                              |
+| **src**                     | Contains source code that will be compiled to the dist dir                                                 |
+| **src**/server.ts           | Entry point to app                                                                                         |
+| **\*\*/\_\_tests\_\_/\*\*** | Separate folder next to the source being tested, contains tests.                                           |
+| .env.example                | Example .env file, create .env file based on this example.                                                 |
+| jest.config.js              | Used to configure Jest running tests written in TypeScript                                                 |
+| package.json                | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped) |
+| tsconfig.json               | Config settings for compiling server code written in TypeScript                                            |
+| .eslintrc                   | Config settings for ESLint code style checking                                                             |
+| .eslintignore               | Config settings for paths to exclude from linting                                                          |
 
 ## Running the build
 
