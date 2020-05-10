@@ -1,5 +1,7 @@
 # Chat Server
 
+[![Build Status](https://travis-ci.com/jurgisrudaks/chat-server.svg?branch=master)](https://travis-ci.com/jurgisrudaks/chat-server)
+
 Simple NodeJS chat server built with Socket.io and Express
 
 # Table of contents:
